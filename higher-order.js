@@ -20,3 +20,21 @@ const toThePower = (num, pow) => {
 };
 
 console.log(toThePower(3, 3));
+
+let value = 12;
+
+const createCounter = () => {
+  let count = 0; 
+  const getCount = () => count
+  const increaseCount = () => count++
+  return {
+    getCount,
+    getValue,
+    increaseCount,
+  };
+};
+
+const counter = createCounter;
+counter.increaseCount();
+console.log(counter.getCount());
+
